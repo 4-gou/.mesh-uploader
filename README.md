@@ -4,7 +4,7 @@ Smo goodé
 
 probably was made to help a certain group of people
 # but saar how do use
-1. first [Download mesh_uploader.zip from Releases 📥 📥 📥 📥](https://github.com/4-gou/.mesh-uploader/releases/latest)
+1. first [Download mesh-uploader.zip from Releases 📥 📥 📥 📥](https://github.com/4-gou/.mesh-uploader/releases/latest)
 2. extract It wjerever yoi want Lole
 3. now befor we do anythin,,, download [Cookie-Editor](https://cookie-editor.com/#download) for yoir browser
 4. go to [Roblox dot com](https://www.roblox.com/home) logged inside an account,,,,,

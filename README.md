@@ -13,7 +13,7 @@ probably was made to help a certain group of people
 7. paste All tjat is inside .ROBLOSECURITY into tje cookie.txt file with notepad for the program
 8. Noooooowww, drag le mesh files yoi are gonn upload into tje mesh_uploader.exe program,,,
 <br>![image](https://github.com/user-attachments/assets/4936a1b2-4887-4514-9ce2-43a5d55ab426)
-9. you will now Get a Log file that has all the mesh IDs that are now uploaded...
+9. you will now Get a Log file that has all the mesh IDs that are now uploaded... Yoi can open it on notepad
 
 
 # コンパイル (Windows)

@@ -12,7 +12,7 @@ local function log(text)
 end
 local function fetchCSRFToken(token: string): string
 	local response = net.request({
-		url = "https://auth.roblox.com/v2/logout",
+		url = "https://presence.roblox.com/v1/presence/users",
 		method = "POST",
 		headers = {["Cookie"]=`.ROBLOSECURITY={token}`,["User-Agent"]="Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
 	})
@@ -31,7 +31,8 @@ local good,biscuit=pcall(function()
 	return fs.readFile("cookie.txt")
 end)
 if good==false then
-	stdio.ewrite("\nthe \"cookie.txt\" file doesn't exist or is invalid\nDid you delete it accidentally?")
+	stdio.ewrite("\n\nthe \"cookie.txt\" file doesn't exist or is invalid\nDid you delete it accidentally?\n\nClosing in 5 seconds")
+	task.wait(5)
 	return
 end
 

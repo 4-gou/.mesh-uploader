@@ -4,7 +4,7 @@ local process = require("@lune/process")
 local fs = require("@lune/fs")
 local task = require("@lune/task")
 
-stdio.write("roblox .mesh uploader\nhttps://github.com/4-gou/.mesh-uploader")
+stdio.write("roblox .mesh uploader\nhttps://github.com/4-gou/roblox-.mesh-uploader")
 
 local logs: string = ""
 local function log(text)

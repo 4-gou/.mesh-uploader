@@ -60,7 +60,7 @@ if latestRBXVersion.ok==true then
 	-- apparently this specific user agent is required otherwise
 	-- uploads will fail with a BadUserAgent error
 else
-	stdio.ewrite("\nFailed to fetch latest Roblox version required to proceed!\n\nClosing in 5 seconds")
+	stdio.ewrite("\n\nFailed to fetch latest Roblox version required to proceed!\n\nClosing in 5 seconds")
 	task.wait(5)
 	return
 end

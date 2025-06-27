@@ -2,7 +2,7 @@
 a shittily coded program in Luaü tjat uploads .mesh files directly to roblox servers
 Smo goodé
 
-probably was made to help a certain group of people
+probably was made to help a certain group of people<br>
 [perhaps you wanna also read this if you are part of them](https://gist.github.com/4-gou/81b2ebefdcf97b8ea5a32b17a8b0a149)
 # but saar how do use
 1. first [Download mesh-uploader.zip from Releases 📥 📥 📥 📥](https://github.com/4-gou/.mesh-uploader/releases/latest)

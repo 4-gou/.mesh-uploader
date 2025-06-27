@@ -45,7 +45,8 @@ if process.args[1]~=nil then
 		return filetable
 	end)
 else
-	stdio.ewrite("\nNo file name was provided.")
+	stdio.ewrite("\n\nNo files were provided.\n\nClosing in 5 seconds")
+	task.wait(5)
 	return
 end
 

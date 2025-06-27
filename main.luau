@@ -4,7 +4,7 @@ local process = require("@lune/process")
 local fs = require("@lune/fs")
 local task = require("@lune/task")
 
-stdio.write("roblox .mesh uploader\nhttps://github.com/4-gou/.mesh-uploader\n")
+stdio.write("roblox .mesh uploader\nhttps://github.com/4-gou/.mesh-uploader")
 
 local logs: string = ""
 local function log(text)
@@ -60,7 +60,8 @@ if latestRBXVersion.ok==true then
 	-- apparently this specific user agent is required otherwise
 	-- uploads will fail with a BadUserAgent error
 else
-	stdio.ewrite("\nFailed to fetch latest Roblox version required to proceed!")
+	stdio.ewrite("\nFailed to fetch latest Roblox version required to proceed!\n\nClosing in 5 seconds")
+	task.wait(5)
 	return
 end
 
@@ -83,8 +84,12 @@ if succeed==true then
 		end
 		fs.writeFile(`{os.time()}_uploads.log`,logs)
 	else
-		stdio.ewrite("\nThe cookie you have provided is invalid")
+		stdio.ewrite("\n\nThe cookie you have provided is invalid\n\nClosing in 5 seconds")
+		task.wait(5)
+		return
 	end
 else
-	stdio.ewrite("\nFailed\nAre the mesh files valid?")
+	stdio.ewrite("\n\nFailed\nAre the mesh files valid?\n\nClosing in 5 seconds")
+	task.wait(5)
+	return
 end

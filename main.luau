@@ -2,9 +2,14 @@ local net = require("@lune/net")
 local stdio = require("@lune/stdio")
 local process = require("@lune/process")
 local fs = require("@lune/fs")
+local task = require("@lune/task")
 
 stdio.write("roblox .mesh uploader\nhttps://github.com/4-gou/.mesh-uploader\n")
 
+local logs: string = ""
+local function log(text)
+	logs..=`{text}\n`
+end
 local function fetchCSRFToken(token: string): string
 	local response = net.request({
 		url = "https://auth.roblox.com/v2/logout",
@@ -30,10 +35,14 @@ if good==false then
 	return
 end
 
-local succeed,file
+local succeed,files
 if process.args[1]~=nil then
-	succeed,file=pcall(function()
-		return fs.readFile(process.args[1])
+	succeed,files=pcall(function()
+		local filetable={}
+		for _,file in process.args do
+			table.insert(filetable,fs.readFile(process.args[1]))
+		end
+		return filetable
 	end)
 else
 	stdio.ewrite("\nNo file name was provided.")
@@ -57,23 +66,25 @@ end
 
 if succeed==true then
 	if isTokenValid(biscuit)==true then
-		local csrf=fetchCSRFToken(biscuit)
-		local response = net.request({
-			url = "https://data.roblox.com/ide/publish/UploadNewMesh?name=Mesh",
-			method = "POST",
-			headers = {["x-csrf-token"]=csrf,["Cookie"]=`.ROBLOSECURITY={biscuit}`,["Content-Type"]="application/octet-stream",["User-Agent"]=userAgent},
-			body = file
-		})
-		if response.ok then
-			stdio.write("\nSuccess! ID: ")
-			stdio.write(response.body)
-		else
-			stdio.ewrite("\nFailed to upload: ")
-			stdio.ewrite(response.body)
+		for _,mesh in files do
+			local csrf=fetchCSRFToken(biscuit)
+			local response = net.request({
+				url = "https://data.roblox.com/ide/publish/UploadNewMesh?name=Mesh",
+				method = "POST",
+				headers = {["x-csrf-token"]=csrf,["Cookie"]=`.ROBLOSECURITY={biscuit}`,["Content-Type"]="application/octet-stream",["User-Agent"]=userAgent},
+				body = mesh
+			})
+			if response.ok then
+				log(`Success! ID: {response.body}`)
+			else
+				log(`Failed to upload: {response.body}`)
+			end
+			task.wait(1.325) -- to prevent ratelimits
 		end
+		fs.writeFile(`{os.time()}_uploads.log`,logs)
 	else
 		stdio.ewrite("\nThe cookie you have provided is invalid")
 	end
 else
-	stdio.ewrite("\nFailed\nIs the mesh file valid?")
+	stdio.ewrite("\nFailed\nAre the mesh files valid?")
 end

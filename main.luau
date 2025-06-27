@@ -12,7 +12,7 @@ local function log(text)
 end
 local function fetchCSRFToken(token: string): string
 	local response = net.request({
-		url = "https://presence.roblox.com/v1/presence/users",
+		url = "https://auth.roblox.com/v2/logout",
 		method = "POST",
 		headers = {["Cookie"]=`.ROBLOSECURITY={token}`,["User-Agent"]="Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
 	})

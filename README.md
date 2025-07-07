@@ -7,6 +7,8 @@ I HATE PAYWALLS I HATE GATEKEEPERS I HATE CLOSED SOURCE I HATE PAYWALLS I HATE G
 RELEASE ALL THE KNOWLEDGE TO NEWBIES I DON'T CARE RELEASE ALL THE KNOWLEDGE TO NEWBIES I DON'T CARE
 
 probably was made to help a certain group of people
+# Wot it can upload sar?
+Mesghes... audios... eugh...mmm animaishyons
 # コンパイル (Windows)
 コンパイルのプロセスはとても簡単だ。<br>
 プログラムをビルドするには、[lune](https://github.com/lune-org/lune)とリポジトリの両方をダウンロードする必要があります。<br>

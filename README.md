@@ -8,7 +8,11 @@ RELEASE ALL THE KNOWLEDGE TO NEWBIES I DON'T CARE RELEASE ALL THE KNOWLEDGE TO N
 
 probably was made to help a certain group of people
 # Wot it can upload sar?
-Mesghes... audios... eugh...mmm animaishyons
+Mesghes... audios... eugh...mmm animaishyons for al lfree. heagh...
+# Okay 👍 wat it can do tho
+Yoi can evebn... download All assets from a Robloc Place file and even Models (rbxl, rbxlx and rbxm)
+This can aslo repalce dead assets giving it a Roblox studo file with your assets downloaded in their respective Folders
+It'll give you another Roblocks file with the asset IDs being replacded whil leaving the old one.....
 # コンパイル (Windows)
 コンパイルのプロセスはとても簡単だ。<br>
 プログラムをビルドするには、[lune](https://github.com/lune-org/lune)とリポジトリの両方をダウンロードする必要があります。<br>
